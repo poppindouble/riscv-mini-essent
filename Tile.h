@@ -12859,6 +12859,7 @@ typedef struct Tile {
     LOG_VAL(debugFile, "dcache$_T", dcache$_T);
     LOG_VAL(debugFile, "arb$_io_dcache_b_valid_T", arb$_io_dcache_b_valid_T);
     LOG_VAL(debugFile, "icache$_T", icache$_T);
+    LOG_VAL(debugFile, "io_host_tohost", io_host_tohost);
     debugFile << "}\n";
     // Done Log Comb Sigs
     // Log Comb Triggers
