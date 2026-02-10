@@ -47,27 +47,6 @@ typedef struct CSR {
   //Done emitTileAccesory
 
   CSR() {
-    time.rand_init();
-    timeh.rand_init();
-    cycle.rand_init();
-    cycleh.rand_init();
-    instret.rand_init();
-    instreth.rand_init();
-    PRV.rand_init();
-    PRV1.rand_init();
-    IE.rand_init();
-    IE1.rand_init();
-    MTIP.rand_init();
-    MTIE.rand_init();
-    MSIP.rand_init();
-    MSIE.rand_init();
-    mtimecmp.rand_init();
-    mscratch.rand_init();
-    mepc.rand_init();
-    mcause.rand_init();
-    mbadaddr.rand_init();
-    mtohost.rand_init();
-    mfromhost.rand_init();
   }
 } CSR;
 
@@ -88,7 +67,6 @@ typedef struct RegFile {
   //Done emitTileAccesory
 
   RegFile() {
-    for (size_t a=0; a < 32; a++) regs[a].rand_init();
   }
 } RegFile;
 
@@ -185,21 +163,6 @@ typedef struct Datapath {
   //Done emitTileAccesory
 
   Datapath() {
-    fe_inst.rand_init();
-    fe_pc.rand_init();
-    ew_inst.rand_init();
-    ew_pc.rand_init();
-    ew_alu.rand_init();
-    csr_in.rand_init();
-    st_type.rand_init();
-    ld_type.rand_init();
-    wb_sel.rand_init();
-    wb_en.rand_init();
-    csr_cmd.rand_init();
-    illegal.rand_init();
-    pc_check.rand_init();
-    started.rand_init();
-    pc.rand_init();
   }
 } Datapath;
 
@@ -323,70 +286,6 @@ typedef struct Cache {
   //Done emitTileAccesory
 
   Cache() {
-    metaMem_tag_rmeta_en_pipe_0.rand_init();
-    metaMem_tag_rmeta_addr_pipe_0.rand_init();
-    dataMem_0_0_rdata_MPORT_en_pipe_0.rand_init();
-    dataMem_0_0_rdata_MPORT_addr_pipe_0.rand_init();
-    dataMem_0_1_rdata_MPORT_en_pipe_0.rand_init();
-    dataMem_0_1_rdata_MPORT_addr_pipe_0.rand_init();
-    dataMem_0_2_rdata_MPORT_en_pipe_0.rand_init();
-    dataMem_0_2_rdata_MPORT_addr_pipe_0.rand_init();
-    dataMem_0_3_rdata_MPORT_en_pipe_0.rand_init();
-    dataMem_0_3_rdata_MPORT_addr_pipe_0.rand_init();
-    dataMem_1_0_rdata_MPORT_1_en_pipe_0.rand_init();
-    dataMem_1_0_rdata_MPORT_1_addr_pipe_0.rand_init();
-    dataMem_1_1_rdata_MPORT_1_en_pipe_0.rand_init();
-    dataMem_1_1_rdata_MPORT_1_addr_pipe_0.rand_init();
-    dataMem_1_2_rdata_MPORT_1_en_pipe_0.rand_init();
-    dataMem_1_2_rdata_MPORT_1_addr_pipe_0.rand_init();
-    dataMem_1_3_rdata_MPORT_1_en_pipe_0.rand_init();
-    dataMem_1_3_rdata_MPORT_1_addr_pipe_0.rand_init();
-    dataMem_2_0_rdata_MPORT_2_en_pipe_0.rand_init();
-    dataMem_2_0_rdata_MPORT_2_addr_pipe_0.rand_init();
-    dataMem_2_1_rdata_MPORT_2_en_pipe_0.rand_init();
-    dataMem_2_1_rdata_MPORT_2_addr_pipe_0.rand_init();
-    dataMem_2_2_rdata_MPORT_2_en_pipe_0.rand_init();
-    dataMem_2_2_rdata_MPORT_2_addr_pipe_0.rand_init();
-    dataMem_2_3_rdata_MPORT_2_en_pipe_0.rand_init();
-    dataMem_2_3_rdata_MPORT_2_addr_pipe_0.rand_init();
-    dataMem_3_0_rdata_MPORT_3_en_pipe_0.rand_init();
-    dataMem_3_0_rdata_MPORT_3_addr_pipe_0.rand_init();
-    dataMem_3_1_rdata_MPORT_3_en_pipe_0.rand_init();
-    dataMem_3_1_rdata_MPORT_3_addr_pipe_0.rand_init();
-    dataMem_3_2_rdata_MPORT_3_en_pipe_0.rand_init();
-    dataMem_3_2_rdata_MPORT_3_addr_pipe_0.rand_init();
-    dataMem_3_3_rdata_MPORT_3_en_pipe_0.rand_init();
-    dataMem_3_3_rdata_MPORT_3_addr_pipe_0.rand_init();
-    state.rand_init();
-    v.rand_init();
-    d.rand_init();
-    addr_reg.rand_init();
-    cpu_data.rand_init();
-    cpu_mask.rand_init();
-    read_count.rand_init();
-    write_count.rand_init();
-    is_alloc_reg.rand_init();
-    ren_reg.rand_init();
-    rdata_buf.rand_init();
-    refill_buf_0.rand_init();
-    refill_buf_1.rand_init();
-    for (size_t a=0; a < 256; a++) metaMem_tag[a].rand_init();
-    for (size_t a=0; a < 256; a++) dataMem_0_0[a].rand_init();
-    for (size_t a=0; a < 256; a++) dataMem_0_1[a].rand_init();
-    for (size_t a=0; a < 256; a++) dataMem_0_2[a].rand_init();
-    for (size_t a=0; a < 256; a++) dataMem_0_3[a].rand_init();
-    for (size_t a=0; a < 256; a++) dataMem_1_0[a].rand_init();
-    for (size_t a=0; a < 256; a++) dataMem_1_1[a].rand_init();
-    for (size_t a=0; a < 256; a++) dataMem_1_2[a].rand_init();
-    for (size_t a=0; a < 256; a++) dataMem_1_3[a].rand_init();
-    for (size_t a=0; a < 256; a++) dataMem_2_0[a].rand_init();
-    for (size_t a=0; a < 256; a++) dataMem_2_1[a].rand_init();
-    for (size_t a=0; a < 256; a++) dataMem_2_2[a].rand_init();
-    for (size_t a=0; a < 256; a++) dataMem_2_3[a].rand_init();
-    for (size_t a=0; a < 256; a++) dataMem_3_0[a].rand_init();
-    for (size_t a=0; a < 256; a++) dataMem_3_1[a].rand_init();
-    for (size_t a=0; a < 256; a++) dataMem_3_2[a].rand_init();
-    for (size_t a=0; a < 256; a++) dataMem_3_3[a].rand_init();
   }
 } Cache;
 
@@ -407,7 +306,6 @@ typedef struct MemArbiter {
   //Done emitTileAccesory
 
   MemArbiter() {
-    state.rand_init();
   }
 } MemArbiter;
 
@@ -481,55 +379,6 @@ typedef struct Tile {
   //Done emitTileAccesory
 
   Tile() {
-    reset.rand_init();
-    io_host_fromhost_valid.rand_init();
-    io_host_fromhost_bits.rand_init();
-    io_host_tohost.rand_init();
-    io_nasti_aw_ready.rand_init();
-    io_nasti_aw_valid.rand_init();
-    io_nasti_aw_bits_addr.rand_init();
-    io_nasti_aw_bits_len.rand_init();
-    io_nasti_aw_bits_size.rand_init();
-    io_nasti_aw_bits_burst.rand_init();
-    io_nasti_aw_bits_lock.rand_init();
-    io_nasti_aw_bits_cache.rand_init();
-    io_nasti_aw_bits_prot.rand_init();
-    io_nasti_aw_bits_qos.rand_init();
-    io_nasti_aw_bits_region.rand_init();
-    io_nasti_aw_bits_id.rand_init();
-    io_nasti_aw_bits_user.rand_init();
-    io_nasti_w_ready.rand_init();
-    io_nasti_w_valid.rand_init();
-    io_nasti_w_bits_data.rand_init();
-    io_nasti_w_bits_last.rand_init();
-    io_nasti_w_bits_id.rand_init();
-    io_nasti_w_bits_strb.rand_init();
-    io_nasti_w_bits_user.rand_init();
-    io_nasti_b_ready.rand_init();
-    io_nasti_b_valid.rand_init();
-    io_nasti_b_bits_resp.rand_init();
-    io_nasti_b_bits_id.rand_init();
-    io_nasti_b_bits_user.rand_init();
-    io_nasti_ar_ready.rand_init();
-    io_nasti_ar_valid.rand_init();
-    io_nasti_ar_bits_addr.rand_init();
-    io_nasti_ar_bits_len.rand_init();
-    io_nasti_ar_bits_size.rand_init();
-    io_nasti_ar_bits_burst.rand_init();
-    io_nasti_ar_bits_lock.rand_init();
-    io_nasti_ar_bits_cache.rand_init();
-    io_nasti_ar_bits_prot.rand_init();
-    io_nasti_ar_bits_qos.rand_init();
-    io_nasti_ar_bits_region.rand_init();
-    io_nasti_ar_bits_id.rand_init();
-    io_nasti_ar_bits_user.rand_init();
-    io_nasti_r_ready.rand_init();
-    io_nasti_r_valid.rand_init();
-    io_nasti_r_bits_resp.rand_init();
-    io_nasti_r_bits_data.rand_init();
-    io_nasti_r_bits_last.rand_init();
-    io_nasti_r_bits_id.rand_init();
-    io_nasti_r_bits_user.rand_init();
   }
 
   //outputPairs
@@ -12304,38 +12153,92 @@ typedef struct Tile {
     LOG_VAL(debugFile, "core.dpath.csr.mcause", core.dpath.csr.mcause, cycle);
     LOG_VAL(debugFile, "core.dpath.csr.mbadaddr", core.dpath.csr.mbadaddr, cycle);
     LOG_VAL(debugFile, "core.dpath.csr.mfromhost", core.dpath.csr.mfromhost, cycle);
+    for (int i = 0; i < 32; i++) {
+      debugFile << "core.dpath.regFile.regs[" << i << "] = " << core.dpath.regFile.regs[i] << " at cycle " << cycle << "\n";
+    }
+    for (int i = 0; i < 256; i++) {
+      debugFile << "icache.metaMem_tag[" << i << "] = " << icache.metaMem_tag[i] << " at cycle " << cycle << "\n";
+    }
     LOG_VAL(debugFile, "icache.metaMem_tag_rmeta_en_pipe_0", icache.metaMem_tag_rmeta_en_pipe_0, cycle);
     LOG_VAL(debugFile, "icache.metaMem_tag_rmeta_addr_pipe_0", icache.metaMem_tag_rmeta_addr_pipe_0, cycle);
+    for (int i = 0; i < 256; i++) {
+      debugFile << "icache.dataMem_0_0[" << i << "] = " << icache.dataMem_0_0[i] << " at cycle " << cycle << "\n";
+    }
     LOG_VAL(debugFile, "icache.dataMem_0_0_rdata_MPORT_en_pipe_0", icache.dataMem_0_0_rdata_MPORT_en_pipe_0, cycle);
     LOG_VAL(debugFile, "icache.dataMem_0_0_rdata_MPORT_addr_pipe_0", icache.dataMem_0_0_rdata_MPORT_addr_pipe_0, cycle);
+    for (int i = 0; i < 256; i++) {
+      debugFile << "icache.dataMem_0_1[" << i << "] = " << icache.dataMem_0_1[i] << " at cycle " << cycle << "\n";
+    }
     LOG_VAL(debugFile, "icache.dataMem_0_1_rdata_MPORT_en_pipe_0", icache.dataMem_0_1_rdata_MPORT_en_pipe_0, cycle);
     LOG_VAL(debugFile, "icache.dataMem_0_1_rdata_MPORT_addr_pipe_0", icache.dataMem_0_1_rdata_MPORT_addr_pipe_0, cycle);
+    for (int i = 0; i < 256; i++) {
+      debugFile << "icache.dataMem_0_2[" << i << "] = " << icache.dataMem_0_2[i] << " at cycle " << cycle << "\n";
+    }
     LOG_VAL(debugFile, "icache.dataMem_0_2_rdata_MPORT_en_pipe_0", icache.dataMem_0_2_rdata_MPORT_en_pipe_0, cycle);
     LOG_VAL(debugFile, "icache.dataMem_0_2_rdata_MPORT_addr_pipe_0", icache.dataMem_0_2_rdata_MPORT_addr_pipe_0, cycle);
+    for (int i = 0; i < 256; i++) {
+      debugFile << "icache.dataMem_0_3[" << i << "] = " << icache.dataMem_0_3[i] << " at cycle " << cycle << "\n";
+    }
     LOG_VAL(debugFile, "icache.dataMem_0_3_rdata_MPORT_en_pipe_0", icache.dataMem_0_3_rdata_MPORT_en_pipe_0, cycle);
     LOG_VAL(debugFile, "icache.dataMem_0_3_rdata_MPORT_addr_pipe_0", icache.dataMem_0_3_rdata_MPORT_addr_pipe_0, cycle);
+    for (int i = 0; i < 256; i++) {
+      debugFile << "icache.dataMem_1_0[" << i << "] = " << icache.dataMem_1_0[i] << " at cycle " << cycle << "\n";
+    }
     LOG_VAL(debugFile, "icache.dataMem_1_0_rdata_MPORT_1_en_pipe_0", icache.dataMem_1_0_rdata_MPORT_1_en_pipe_0, cycle);
     LOG_VAL(debugFile, "icache.dataMem_1_0_rdata_MPORT_1_addr_pipe_0", icache.dataMem_1_0_rdata_MPORT_1_addr_pipe_0, cycle);
+    for (int i = 0; i < 256; i++) {
+      debugFile << "icache.dataMem_1_1[" << i << "] = " << icache.dataMem_1_1[i] << " at cycle " << cycle << "\n";
+    }
     LOG_VAL(debugFile, "icache.dataMem_1_1_rdata_MPORT_1_en_pipe_0", icache.dataMem_1_1_rdata_MPORT_1_en_pipe_0, cycle);
     LOG_VAL(debugFile, "icache.dataMem_1_1_rdata_MPORT_1_addr_pipe_0", icache.dataMem_1_1_rdata_MPORT_1_addr_pipe_0, cycle);
+    for (int i = 0; i < 256; i++) {
+      debugFile << "icache.dataMem_1_2[" << i << "] = " << icache.dataMem_1_2[i] << " at cycle " << cycle << "\n";
+    }
     LOG_VAL(debugFile, "icache.dataMem_1_2_rdata_MPORT_1_en_pipe_0", icache.dataMem_1_2_rdata_MPORT_1_en_pipe_0, cycle);
     LOG_VAL(debugFile, "icache.dataMem_1_2_rdata_MPORT_1_addr_pipe_0", icache.dataMem_1_2_rdata_MPORT_1_addr_pipe_0, cycle);
+    for (int i = 0; i < 256; i++) {
+      debugFile << "icache.dataMem_1_3[" << i << "] = " << icache.dataMem_1_3[i] << " at cycle " << cycle << "\n";
+    }
     LOG_VAL(debugFile, "icache.dataMem_1_3_rdata_MPORT_1_en_pipe_0", icache.dataMem_1_3_rdata_MPORT_1_en_pipe_0, cycle);
     LOG_VAL(debugFile, "icache.dataMem_1_3_rdata_MPORT_1_addr_pipe_0", icache.dataMem_1_3_rdata_MPORT_1_addr_pipe_0, cycle);
+    for (int i = 0; i < 256; i++) {
+      debugFile << "icache.dataMem_2_0[" << i << "] = " << icache.dataMem_2_0[i] << " at cycle " << cycle << "\n";
+    }
     LOG_VAL(debugFile, "icache.dataMem_2_0_rdata_MPORT_2_en_pipe_0", icache.dataMem_2_0_rdata_MPORT_2_en_pipe_0, cycle);
     LOG_VAL(debugFile, "icache.dataMem_2_0_rdata_MPORT_2_addr_pipe_0", icache.dataMem_2_0_rdata_MPORT_2_addr_pipe_0, cycle);
+    for (int i = 0; i < 256; i++) {
+      debugFile << "icache.dataMem_2_1[" << i << "] = " << icache.dataMem_2_1[i] << " at cycle " << cycle << "\n";
+    }
     LOG_VAL(debugFile, "icache.dataMem_2_1_rdata_MPORT_2_en_pipe_0", icache.dataMem_2_1_rdata_MPORT_2_en_pipe_0, cycle);
     LOG_VAL(debugFile, "icache.dataMem_2_1_rdata_MPORT_2_addr_pipe_0", icache.dataMem_2_1_rdata_MPORT_2_addr_pipe_0, cycle);
+    for (int i = 0; i < 256; i++) {
+      debugFile << "icache.dataMem_2_2[" << i << "] = " << icache.dataMem_2_2[i] << " at cycle " << cycle << "\n";
+    }
     LOG_VAL(debugFile, "icache.dataMem_2_2_rdata_MPORT_2_en_pipe_0", icache.dataMem_2_2_rdata_MPORT_2_en_pipe_0, cycle);
     LOG_VAL(debugFile, "icache.dataMem_2_2_rdata_MPORT_2_addr_pipe_0", icache.dataMem_2_2_rdata_MPORT_2_addr_pipe_0, cycle);
+    for (int i = 0; i < 256; i++) {
+      debugFile << "icache.dataMem_2_3[" << i << "] = " << icache.dataMem_2_3[i] << " at cycle " << cycle << "\n";
+    }
     LOG_VAL(debugFile, "icache.dataMem_2_3_rdata_MPORT_2_en_pipe_0", icache.dataMem_2_3_rdata_MPORT_2_en_pipe_0, cycle);
     LOG_VAL(debugFile, "icache.dataMem_2_3_rdata_MPORT_2_addr_pipe_0", icache.dataMem_2_3_rdata_MPORT_2_addr_pipe_0, cycle);
+    for (int i = 0; i < 256; i++) {
+      debugFile << "icache.dataMem_3_0[" << i << "] = " << icache.dataMem_3_0[i] << " at cycle " << cycle << "\n";
+    }
     LOG_VAL(debugFile, "icache.dataMem_3_0_rdata_MPORT_3_en_pipe_0", icache.dataMem_3_0_rdata_MPORT_3_en_pipe_0, cycle);
     LOG_VAL(debugFile, "icache.dataMem_3_0_rdata_MPORT_3_addr_pipe_0", icache.dataMem_3_0_rdata_MPORT_3_addr_pipe_0, cycle);
+    for (int i = 0; i < 256; i++) {
+      debugFile << "icache.dataMem_3_1[" << i << "] = " << icache.dataMem_3_1[i] << " at cycle " << cycle << "\n";
+    }
     LOG_VAL(debugFile, "icache.dataMem_3_1_rdata_MPORT_3_en_pipe_0", icache.dataMem_3_1_rdata_MPORT_3_en_pipe_0, cycle);
     LOG_VAL(debugFile, "icache.dataMem_3_1_rdata_MPORT_3_addr_pipe_0", icache.dataMem_3_1_rdata_MPORT_3_addr_pipe_0, cycle);
+    for (int i = 0; i < 256; i++) {
+      debugFile << "icache.dataMem_3_2[" << i << "] = " << icache.dataMem_3_2[i] << " at cycle " << cycle << "\n";
+    }
     LOG_VAL(debugFile, "icache.dataMem_3_2_rdata_MPORT_3_en_pipe_0", icache.dataMem_3_2_rdata_MPORT_3_en_pipe_0, cycle);
     LOG_VAL(debugFile, "icache.dataMem_3_2_rdata_MPORT_3_addr_pipe_0", icache.dataMem_3_2_rdata_MPORT_3_addr_pipe_0, cycle);
+    for (int i = 0; i < 256; i++) {
+      debugFile << "icache.dataMem_3_3[" << i << "] = " << icache.dataMem_3_3[i] << " at cycle " << cycle << "\n";
+    }
     LOG_VAL(debugFile, "icache.dataMem_3_3_rdata_MPORT_3_en_pipe_0", icache.dataMem_3_3_rdata_MPORT_3_en_pipe_0, cycle);
     LOG_VAL(debugFile, "icache.dataMem_3_3_rdata_MPORT_3_addr_pipe_0", icache.dataMem_3_3_rdata_MPORT_3_addr_pipe_0, cycle);
     LOG_VAL(debugFile, "icache.state", icache.state, cycle);
@@ -12351,38 +12254,89 @@ typedef struct Tile {
     LOG_VAL(debugFile, "icache.rdata_buf", icache.rdata_buf, cycle);
     LOG_VAL(debugFile, "icache.refill_buf_0", icache.refill_buf_0, cycle);
     LOG_VAL(debugFile, "icache.refill_buf_1", icache.refill_buf_1, cycle);
+    for (int i = 0; i < 256; i++) {
+      debugFile << "dcache.metaMem_tag[" << i << "] = " << dcache.metaMem_tag[i] << " at cycle " << cycle << "\n";
+    }
     LOG_VAL(debugFile, "dcache.metaMem_tag_rmeta_en_pipe_0", dcache.metaMem_tag_rmeta_en_pipe_0, cycle);
     LOG_VAL(debugFile, "dcache.metaMem_tag_rmeta_addr_pipe_0", dcache.metaMem_tag_rmeta_addr_pipe_0, cycle);
+    for (int i = 0; i < 256; i++) {
+      debugFile << "dcache.dataMem_0_0[" << i << "] = " << dcache.dataMem_0_0[i] << " at cycle " << cycle << "\n";
+    }
     LOG_VAL(debugFile, "dcache.dataMem_0_0_rdata_MPORT_en_pipe_0", dcache.dataMem_0_0_rdata_MPORT_en_pipe_0, cycle);
     LOG_VAL(debugFile, "dcache.dataMem_0_0_rdata_MPORT_addr_pipe_0", dcache.dataMem_0_0_rdata_MPORT_addr_pipe_0, cycle);
+    for (int i = 0; i < 256; i++) {
+      debugFile << "dcache.dataMem_0_1[" << i << "] = " << dcache.dataMem_0_1[i] << " at cycle " << cycle << "\n";
+    }
     LOG_VAL(debugFile, "dcache.dataMem_0_1_rdata_MPORT_en_pipe_0", dcache.dataMem_0_1_rdata_MPORT_en_pipe_0, cycle);
     LOG_VAL(debugFile, "dcache.dataMem_0_1_rdata_MPORT_addr_pipe_0", dcache.dataMem_0_1_rdata_MPORT_addr_pipe_0, cycle);
+    for (int i = 0; i < 256; i++) {
+      debugFile << "dcache.dataMem_0_2[" << i << "] = " << dcache.dataMem_0_2[i] << " at cycle " << cycle << "\n";
+    }
     LOG_VAL(debugFile, "dcache.dataMem_0_2_rdata_MPORT_en_pipe_0", dcache.dataMem_0_2_rdata_MPORT_en_pipe_0, cycle);
     LOG_VAL(debugFile, "dcache.dataMem_0_2_rdata_MPORT_addr_pipe_0", dcache.dataMem_0_2_rdata_MPORT_addr_pipe_0, cycle);
+    for (int i = 0; i < 256; i++) {
+      debugFile << "dcache.dataMem_0_3[" << i << "] = " << dcache.dataMem_0_3[i] << " at cycle " << cycle << "\n";
+    }
     LOG_VAL(debugFile, "dcache.dataMem_0_3_rdata_MPORT_en_pipe_0", dcache.dataMem_0_3_rdata_MPORT_en_pipe_0, cycle);
     LOG_VAL(debugFile, "dcache.dataMem_0_3_rdata_MPORT_addr_pipe_0", dcache.dataMem_0_3_rdata_MPORT_addr_pipe_0, cycle);
+    for (int i = 0; i < 256; i++) {
+      debugFile << "dcache.dataMem_1_0[" << i << "] = " << dcache.dataMem_1_0[i] << " at cycle " << cycle << "\n";
+    }
     LOG_VAL(debugFile, "dcache.dataMem_1_0_rdata_MPORT_1_en_pipe_0", dcache.dataMem_1_0_rdata_MPORT_1_en_pipe_0, cycle);
     LOG_VAL(debugFile, "dcache.dataMem_1_0_rdata_MPORT_1_addr_pipe_0", dcache.dataMem_1_0_rdata_MPORT_1_addr_pipe_0, cycle);
+    for (int i = 0; i < 256; i++) {
+      debugFile << "dcache.dataMem_1_1[" << i << "] = " << dcache.dataMem_1_1[i] << " at cycle " << cycle << "\n";
+    }
     LOG_VAL(debugFile, "dcache.dataMem_1_1_rdata_MPORT_1_en_pipe_0", dcache.dataMem_1_1_rdata_MPORT_1_en_pipe_0, cycle);
     LOG_VAL(debugFile, "dcache.dataMem_1_1_rdata_MPORT_1_addr_pipe_0", dcache.dataMem_1_1_rdata_MPORT_1_addr_pipe_0, cycle);
+    for (int i = 0; i < 256; i++) {
+      debugFile << "dcache.dataMem_1_2[" << i << "] = " << dcache.dataMem_1_2[i] << " at cycle " << cycle << "\n";
+    }
     LOG_VAL(debugFile, "dcache.dataMem_1_2_rdata_MPORT_1_en_pipe_0", dcache.dataMem_1_2_rdata_MPORT_1_en_pipe_0, cycle);
     LOG_VAL(debugFile, "dcache.dataMem_1_2_rdata_MPORT_1_addr_pipe_0", dcache.dataMem_1_2_rdata_MPORT_1_addr_pipe_0, cycle);
+    for (int i = 0; i < 256; i++) {
+      debugFile << "dcache.dataMem_1_3[" << i << "] = " << dcache.dataMem_1_3[i] << " at cycle " << cycle << "\n";
+    }
     LOG_VAL(debugFile, "dcache.dataMem_1_3_rdata_MPORT_1_en_pipe_0", dcache.dataMem_1_3_rdata_MPORT_1_en_pipe_0, cycle);
     LOG_VAL(debugFile, "dcache.dataMem_1_3_rdata_MPORT_1_addr_pipe_0", dcache.dataMem_1_3_rdata_MPORT_1_addr_pipe_0, cycle);
+    for (int i = 0; i < 256; i++) {
+      debugFile << "dcache.dataMem_2_0[" << i << "] = " << dcache.dataMem_2_0[i] << " at cycle " << cycle << "\n";
+    }
     LOG_VAL(debugFile, "dcache.dataMem_2_0_rdata_MPORT_2_en_pipe_0", dcache.dataMem_2_0_rdata_MPORT_2_en_pipe_0, cycle);
     LOG_VAL(debugFile, "dcache.dataMem_2_0_rdata_MPORT_2_addr_pipe_0", dcache.dataMem_2_0_rdata_MPORT_2_addr_pipe_0, cycle);
+    for (int i = 0; i < 256; i++) {
+      debugFile << "dcache.dataMem_2_1[" << i << "] = " << dcache.dataMem_2_1[i] << " at cycle " << cycle << "\n";
+    }
     LOG_VAL(debugFile, "dcache.dataMem_2_1_rdata_MPORT_2_en_pipe_0", dcache.dataMem_2_1_rdata_MPORT_2_en_pipe_0, cycle);
     LOG_VAL(debugFile, "dcache.dataMem_2_1_rdata_MPORT_2_addr_pipe_0", dcache.dataMem_2_1_rdata_MPORT_2_addr_pipe_0, cycle);
+    for (int i = 0; i < 256; i++) {
+      debugFile << "dcache.dataMem_2_2[" << i << "] = " << dcache.dataMem_2_2[i] << " at cycle " << cycle << "\n";
+    }
     LOG_VAL(debugFile, "dcache.dataMem_2_2_rdata_MPORT_2_en_pipe_0", dcache.dataMem_2_2_rdata_MPORT_2_en_pipe_0, cycle);
     LOG_VAL(debugFile, "dcache.dataMem_2_2_rdata_MPORT_2_addr_pipe_0", dcache.dataMem_2_2_rdata_MPORT_2_addr_pipe_0, cycle);
+    for (int i = 0; i < 256; i++) {
+      debugFile << "dcache.dataMem_2_3[" << i << "] = " << dcache.dataMem_2_3[i] << " at cycle " << cycle << "\n";
+    }
     LOG_VAL(debugFile, "dcache.dataMem_2_3_rdata_MPORT_2_en_pipe_0", dcache.dataMem_2_3_rdata_MPORT_2_en_pipe_0, cycle);
     LOG_VAL(debugFile, "dcache.dataMem_2_3_rdata_MPORT_2_addr_pipe_0", dcache.dataMem_2_3_rdata_MPORT_2_addr_pipe_0, cycle);
+    for (int i = 0; i < 256; i++) {
+      debugFile << "dcache.dataMem_3_0[" << i << "] = " << dcache.dataMem_3_0[i] << " at cycle " << cycle << "\n";
+    }
     LOG_VAL(debugFile, "dcache.dataMem_3_0_rdata_MPORT_3_en_pipe_0", dcache.dataMem_3_0_rdata_MPORT_3_en_pipe_0, cycle);
     LOG_VAL(debugFile, "dcache.dataMem_3_0_rdata_MPORT_3_addr_pipe_0", dcache.dataMem_3_0_rdata_MPORT_3_addr_pipe_0, cycle);
+    for (int i = 0; i < 256; i++) {
+      debugFile << "dcache.dataMem_3_1[" << i << "] = " << dcache.dataMem_3_1[i] << " at cycle " << cycle << "\n";
+    }
     LOG_VAL(debugFile, "dcache.dataMem_3_1_rdata_MPORT_3_en_pipe_0", dcache.dataMem_3_1_rdata_MPORT_3_en_pipe_0, cycle);
     LOG_VAL(debugFile, "dcache.dataMem_3_1_rdata_MPORT_3_addr_pipe_0", dcache.dataMem_3_1_rdata_MPORT_3_addr_pipe_0, cycle);
+    for (int i = 0; i < 256; i++) {
+      debugFile << "dcache.dataMem_3_2[" << i << "] = " << dcache.dataMem_3_2[i] << " at cycle " << cycle << "\n";
+    }
     LOG_VAL(debugFile, "dcache.dataMem_3_2_rdata_MPORT_3_en_pipe_0", dcache.dataMem_3_2_rdata_MPORT_3_en_pipe_0, cycle);
     LOG_VAL(debugFile, "dcache.dataMem_3_2_rdata_MPORT_3_addr_pipe_0", dcache.dataMem_3_2_rdata_MPORT_3_addr_pipe_0, cycle);
+    for (int i = 0; i < 256; i++) {
+      debugFile << "dcache.dataMem_3_3[" << i << "] = " << dcache.dataMem_3_3[i] << " at cycle " << cycle << "\n";
+    }
     LOG_VAL(debugFile, "dcache.dataMem_3_3_rdata_MPORT_3_en_pipe_0", dcache.dataMem_3_3_rdata_MPORT_3_en_pipe_0, cycle);
     LOG_VAL(debugFile, "dcache.dataMem_3_3_rdata_MPORT_3_addr_pipe_0", dcache.dataMem_3_3_rdata_MPORT_3_addr_pipe_0, cycle);
     LOG_VAL(debugFile, "dcache.state", dcache.state, cycle);
@@ -12904,6 +12858,43 @@ typedef struct Tile {
     }
     debugFile << "}\n";
     // Done Log Comb Triggers
+    // Log Design Output
+    debugFile << "[Design Output] {\n";
+    LOG_VAL(debugFile, "io_host_tohost", io_host_tohost, cycle);
+    LOG_VAL(debugFile, "io_nasti_aw_valid", io_nasti_aw_valid, cycle);
+    LOG_VAL(debugFile, "io_nasti_aw_bits_addr", io_nasti_aw_bits_addr, cycle);
+    LOG_VAL(debugFile, "io_nasti_aw_bits_len", io_nasti_aw_bits_len, cycle);
+    LOG_VAL(debugFile, "io_nasti_aw_bits_size", io_nasti_aw_bits_size, cycle);
+    LOG_VAL(debugFile, "io_nasti_aw_bits_burst", io_nasti_aw_bits_burst, cycle);
+    LOG_VAL(debugFile, "io_nasti_aw_bits_lock", io_nasti_aw_bits_lock, cycle);
+    LOG_VAL(debugFile, "io_nasti_aw_bits_cache", io_nasti_aw_bits_cache, cycle);
+    LOG_VAL(debugFile, "io_nasti_aw_bits_prot", io_nasti_aw_bits_prot, cycle);
+    LOG_VAL(debugFile, "io_nasti_aw_bits_qos", io_nasti_aw_bits_qos, cycle);
+    LOG_VAL(debugFile, "io_nasti_aw_bits_region", io_nasti_aw_bits_region, cycle);
+    LOG_VAL(debugFile, "io_nasti_aw_bits_id", io_nasti_aw_bits_id, cycle);
+    LOG_VAL(debugFile, "io_nasti_aw_bits_user", io_nasti_aw_bits_user, cycle);
+    LOG_VAL(debugFile, "io_nasti_w_valid", io_nasti_w_valid, cycle);
+    LOG_VAL(debugFile, "io_nasti_w_bits_data", io_nasti_w_bits_data, cycle);
+    LOG_VAL(debugFile, "io_nasti_w_bits_last", io_nasti_w_bits_last, cycle);
+    LOG_VAL(debugFile, "io_nasti_w_bits_id", io_nasti_w_bits_id, cycle);
+    LOG_VAL(debugFile, "io_nasti_w_bits_strb", io_nasti_w_bits_strb, cycle);
+    LOG_VAL(debugFile, "io_nasti_w_bits_user", io_nasti_w_bits_user, cycle);
+    LOG_VAL(debugFile, "io_nasti_b_ready", io_nasti_b_ready, cycle);
+    LOG_VAL(debugFile, "io_nasti_ar_valid", io_nasti_ar_valid, cycle);
+    LOG_VAL(debugFile, "io_nasti_ar_bits_addr", io_nasti_ar_bits_addr, cycle);
+    LOG_VAL(debugFile, "io_nasti_ar_bits_len", io_nasti_ar_bits_len, cycle);
+    LOG_VAL(debugFile, "io_nasti_ar_bits_size", io_nasti_ar_bits_size, cycle);
+    LOG_VAL(debugFile, "io_nasti_ar_bits_burst", io_nasti_ar_bits_burst, cycle);
+    LOG_VAL(debugFile, "io_nasti_ar_bits_lock", io_nasti_ar_bits_lock, cycle);
+    LOG_VAL(debugFile, "io_nasti_ar_bits_cache", io_nasti_ar_bits_cache, cycle);
+    LOG_VAL(debugFile, "io_nasti_ar_bits_prot", io_nasti_ar_bits_prot, cycle);
+    LOG_VAL(debugFile, "io_nasti_ar_bits_qos", io_nasti_ar_bits_qos, cycle);
+    LOG_VAL(debugFile, "io_nasti_ar_bits_region", io_nasti_ar_bits_region, cycle);
+    LOG_VAL(debugFile, "io_nasti_ar_bits_id", io_nasti_ar_bits_id, cycle);
+    LOG_VAL(debugFile, "io_nasti_ar_bits_user", io_nasti_ar_bits_user, cycle);
+    LOG_VAL(debugFile, "io_nasti_r_ready", io_nasti_r_ready, cycle);
+    debugFile << "}\n";
+    // Done Log Design Output
     regs_set = true;
 
     
